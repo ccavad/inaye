@@ -14,7 +14,9 @@ let swiperHero = new Swiper(".home__hero", {
 });
 
 let swiperActivities = new Swiper(".home__activities-swiper", {
-  autoplay: true,
+  autoplay: {
+    delay: 3000,
+  },
   slidesPerView: 3,
   spaceBetween: 30,
   loop: true,
@@ -25,6 +27,19 @@ let swiperActivities = new Swiper(".home__activities-swiper", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    654: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
   },
 });
 

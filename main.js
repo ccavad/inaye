@@ -1,5 +1,18 @@
 // dom elements
 const scrollTopBtn = document.querySelector(".scrollTopBtn");
+const mobilenav = document.querySelector(".mobilenav");
+const hamburger = document.querySelector(".header__hamburger");
+const mobilenavclose = document.querySelector(".mobilenavclose");
+
+// event listeners
+
+hamburger.addEventListener("click", () => {
+  mobilenav.classList.add("active");
+});
+
+mobilenavclose.addEventListener("click", () => {
+  mobilenav.classList.remove("active");
+});
 
 // swiper
 let swiperHero = new Swiper(".home__hero", {
@@ -50,6 +63,15 @@ let swiperFooter = new Swiper(".footer-swiper", {
   slidesPerView: 4,
   spaceBetween: 30,
   loop: true,
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+    },
+    500: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+  },
 });
 
 // scroll

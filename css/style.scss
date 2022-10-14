@@ -123,7 +123,7 @@ header {
     display: block;
   }
   @media (max-width: 1024px) {
-    order: 1;
+    // order: 1;
   }
 }
 
@@ -148,7 +148,7 @@ header {
   }
   @media (max-width: 500px) {
     flex: 0;
-    order: 2;
+    // order: 2;
     font-size: 0.5rem;
   }
 }
@@ -197,6 +197,7 @@ header {
     border-radius: 5px;
     cursor: pointer;
     height: auto;
+    text-align: center;
 
     a {
       color: white;
@@ -215,10 +216,65 @@ header {
   }
 }
 
+// mobile sidebar
+.mobilenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $green;
+  color: white;
+  z-index: 4;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    display: flex;
+    animation: mobilenav 1s linear;
+  }
+
+  .grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    font-size: 2rem;
+  }
+
+  .grid-item {
+    animation: mobilenavitems linear;
+
+    &:nth-of-type(1) {
+      animation-duration: 1.5s;
+    }
+    &:nth-of-type(2) {
+      animation-duration: 2s;
+    }
+    &:nth-of-type(3) {
+      animation-duration: 2.5s;
+    }
+  }
+
+  .mobilenavclose {
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+
+    button {
+      color: white;
+    }
+  }
+}
+
 // home hero swiper
 
 .home__hero {
-  height: 400px !important;
+  height: auto !important;
+
+  img {
+    object-fit: contain;
+  }
 
   .swiper-button-next,
   .swiper-button-prev {
@@ -440,14 +496,14 @@ header {
 
 .home__calltoaction {
   background-color: #424242;
-  padding: 3rem;
+  padding: 5rem 3rem;
 
   @media (max-width: 700px) {
     padding: 3rem 1rem;
   }
 
   .grid {
-    width: 50%;
+    width: 75%;
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -569,12 +625,12 @@ footer {
   .footer__right {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
 
     aside {
       h3 {
         color: #e0e0e0;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
+        font-size: 1.5em;
       }
       a {
         color: #8a8a8a;
@@ -593,10 +649,15 @@ footer {
     .footer-swiper {
       width: 450px;
       margin: 0;
+      height: 200px;
+
+      @media (max-width: 500px) {
+        width: 250px;
+      }
 
       .swiper-slide {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
 
         img {
           object-fit: cover;
@@ -614,8 +675,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
   height: 130px;
+  padding-inline: 2rem;
+  text-align: center;
 
   a {
     color: $green;

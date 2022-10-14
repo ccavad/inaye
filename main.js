@@ -44,14 +44,12 @@ let swiperActivities = new Swiper(".home__activities-swiper", {
 });
 
 let swiperFooter = new Swiper(".footer-swiper", {
-  autoplay: true,
-  slidesPerView: 5,
-  // spaceBetween: 30,
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+  autoplay: {
+    delay: 2000,
   },
+  slidesPerView: 4,
+  spaceBetween: 30,
+  loop: true,
 });
 
 // scroll

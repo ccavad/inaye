@@ -1,10 +1,9 @@
 // dom elements
-const scrollTopBtn = document.querySelector(".scrollTopBtn");
+
+// event listeners
 const mobilenav = document.querySelector(".mobilenav");
 const hamburger = document.querySelector(".header__hamburger");
 const mobilenavclose = document.querySelector(".mobilenavclose");
-
-// event listeners
 
 hamburger.addEventListener("click", () => {
   mobilenav.classList.add("active");
@@ -12,6 +11,23 @@ hamburger.addEventListener("click", () => {
 
 mobilenavclose.addEventListener("click", () => {
   mobilenav.classList.remove("active");
+});
+
+// accordion
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach((accordion) => {
+  accordion.addEventListener("click", (e) => {
+    const content = e.target.parentElement.children[1];
+    const ion = accordion.querySelector("ion-icon");
+
+    content.classList.toggle("active");
+    if (content.classList.contains("active")) {
+      ion.name = "chevron-up";
+    } else {
+      ion.name = "chevron-down";
+    }
+  });
 });
 
 // swiper
@@ -68,6 +84,10 @@ let swiperFooter = new Swiper(".footer-swiper", {
       slidesPerView: 2,
     },
     500: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    700: {
       slidesPerView: 4,
       spaceBetween: 30,
     },
@@ -75,6 +95,7 @@ let swiperFooter = new Swiper(".footer-swiper", {
 });
 
 // scroll
+const scrollTopBtn = document.querySelector(".scrollTopBtn");
 
 window.addEventListener("scroll", () => {
   if (

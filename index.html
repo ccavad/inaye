@@ -42,14 +42,14 @@
           <a href="./index.html">Əsas</a>
         </li>
         <li>
-          <a href="#">Haqqımızda</a>
+          <a href="./pages/about.html">Haqqımızda</a>
         </li>
         <li class="dropdown">
           <a href="#" class="dropbtn"
             >Fəaliyyətlər <ion-icon name="chevron-down"></ion-icon
           ></a>
           <div class="dropdown-content">
-            <a href="#">Fəaliyyətlərimiz</a>
+            <a href="./pages/activities.html">Fəaliyyətlərimiz</a>
             <a href="#">Aksiyalar</a>
             <a href="#">Layihələr</a>
           </div>
@@ -95,18 +95,83 @@
       </ul>
     </header>
 
+    <!-- mobile nav menu -->
     <section class="mobilenav">
-      <div class="grid">
-        <div class="grid-item">home</div>
-        <div class="grid-item">about</div>
-        <div class="grid-item">contact</div>
-      </div>
-      <div class="mobilenavclose">
-        <button>
-          <ion-icon></ion-icon>
-        </button>
-      </div>
+      <ul class="mobilenav-menu">
+        <li>
+          <a href="./index.html">Əsas</a>
+        </li>
+        <li>
+          <a href="#">Haqqımızda</a>
+        </li>
+        <li>
+          <a href="#" class="accordion"
+            >Fəaliyyətlər <ion-icon name="chevron-down"></ion-icon
+          ></a>
+          <div class="accordion-content">
+            <a href="#">Fəaliyyətlərimiz</a>
+            <a href="#">Aksiyalar</a>
+            <a href="#">Layihələr</a>
+          </div>
+        </li>
+        <li>
+          <a href="#" class="accordion"
+            >Müraciət <ion-icon name="chevron-down"></ion-icon
+          ></a>
+          <div class="accordion-content">
+            <a href="#">Üzv Ol</a>
+            <a href="#">Könüllü Ol</a>
+            <a href="#">Ehtiyacım Var</a>
+          </div>
+        </li>
+        <li>
+          <a href="#" class="accordion"
+            >Qalereya <ion-icon name="chevron-down"></ion-icon
+          ></a>
+          <div class="accordion-content">
+            <a href="#">Fotolar</a>
+            <a href="#">Videolar</a>
+          </div>
+        </li>
+        <li>
+          <a href="#">Hesabat</a>
+        </li>
+        <li>
+          <a href="#">Əlaqə</a>
+        </li>
+        <li>
+          <a href="#" class="accordion"
+            >AZ <ion-icon name="chevron-down"></ion-icon
+          ></a>
+          <div class="accordion-content">
+            <a href="#">AZ</a>
+            <a href="#">RU</a>
+            <a href="#">EN</a>
+          </div>
+        </li>
+        <li class="header__donate">
+          <a href="#">İanə et</a>
+        </li>
+      </ul>
+      <button class="mobilenavclose">
+        <ion-icon name="close"></ion-icon>
+      </button>
     </section>
+
+    <div class="stickybar">
+      <a href="#" class="donate">
+        <ion-icon name="star"></ion-icon>
+        İanə Et
+      </a>
+      <a href="#" class="register">
+        <ion-icon name="person"></ion-icon>
+        Üzv ol
+      </a>
+      <a href="#" class="voluntary">
+        <ion-icon name="person-add"></ion-icon>
+        Könüllü ol
+      </a>
+    </div>
 
     <section class="home__hero swiper">
       <div class="swiper-wrapper">

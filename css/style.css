@@ -397,6 +397,7 @@ header {
   color: #0d0d0d;
   padding-bottom: 20px;
   text-transform: capitalize;
+  font-weight: 400;
 }
 .activity-slider .swiper-button-next,
 .activity-slider .swiper-button-prev {
@@ -695,6 +696,235 @@ footer .footer__right .footer-swiper .swiper-slide img {
 }
 .copyright-section a:hover {
   color: #ff7e27;
+}
+
+.about__hero {
+  display: grid;
+  place-items: center;
+  padding: 3rem;
+}
+.about__hero img {
+  border-radius: 10px;
+  max-width: 60%;
+  height: auto;
+}
+
+.about__infotext {
+  padding: 3rem 5rem;
+}
+@media (max-width: 768px) {
+  .about__infotext {
+    padding: 3rem;
+  }
+}
+.about__infotext h2 {
+  color: #333333;
+  font-weight: 800;
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+}
+.about__infotext h4 {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+.about__infotext p {
+  color: #0d0d0d;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.about__services {
+  padding: 3rem;
+  padding-bottom: 9rem;
+  background-color: #f6f5f2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.about__services h2 {
+  color: #333333;
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+.about__services h4 {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #333333;
+  margin-bottom: 2rem;
+}
+.about__services .grid {
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 3rem;
+}
+.about__services .about__services-srv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 2rem;
+  min-width: 250px;
+}
+.about__services .about__services-srv img {
+  scale: 1.1;
+}
+.about__services .about__services-srv p {
+  color: #84c54e;
+  line-height: 1.4rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  max-width: 70%;
+  transition: 0.4s;
+}
+.about__services .about__services-srv p:hover {
+  color: #ff7e27;
+}
+
+.about__account {
+  padding: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.about__account h2 {
+  color: #333333;
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+.about__account h4 {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #333333;
+  margin-bottom: 2rem;
+}
+.about__account a {
+  background-color: #84c54e;
+  color: white;
+  border-radius: 5px;
+  align-self: center;
+  padding: 1.5rem 2rem;
+  font-size: 1.2rem;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.about__account a ion-icon {
+  font-size: 1.8rem;
+}
+.about__account a:hover {
+  background-color: #ff7e27;
+}
+.about__account .grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+@media (max-width: 800px) {
+  .about__account .grid {
+    flex-direction: column;
+  }
+}
+.about__account .grid .grid-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.about__account .grid .grid-item div {
+  color: #84c54e;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.activities__main {
+  padding: 3rem 5rem;
+}
+.activities__main h1 {
+  font-size: 3.5rem;
+  color: #84c54e;
+  margin-bottom: 3rem;
+}
+.activities__main .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  justify-items: center;
+}
+@media (max-width: 768px) {
+  .activities__main .grid {
+    grid-template-columns: 1fr;
+  }
+}
+.activities__main .grid .item {
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 13px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.activities__main .grid .item p {
+  color: #8a8a8a;
+  font-size: 0.9rem;
+}
+.activities__main .grid .item h3 {
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  font-size: 1.4rem;
+  color: #84c54e;
+  line-height: normal;
+}
+.activities__main .grid .item img {
+  max-width: 100%;
+}
+.activities__main .grid .item a {
+  text-align: center;
+  background-color: #ffd000;
+  padding: 0.5rem 2.4rem;
+  border-radius: 3px;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333333;
+  align-self: center;
+  margin-top: 2rem;
+}
+.activities__main .grid .item a:hover {
+  background-color: #84c54e;
+  color: white;
+}
+.activities__main .pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+  margin-top: 1.5rem;
+}
+.activities__main .pagination button {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+}
+.activities__main .pagination button.nav {
+  background-color: #333333;
+  color: white;
+}
+.activities__main .pagination button.nav:hover {
+  background-color: #ff7e27;
 }
 
 .scrollTopBtn {

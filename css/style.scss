@@ -978,6 +978,7 @@ footer {
         font-size: 1.4rem;
         color: $green;
         line-height: normal;
+        margin-bottom: 2rem;
       }
       img {
         max-width: 100%;
@@ -1017,14 +1018,22 @@ footer {
       justify-content: center;
       align-items: center;
       border: 0;
+      background-color: #f6f5f2;
+      color: #8a8a8a;
 
       &.nav {
         background-color: $black;
         color: white;
+        font-family: monospace;
 
         &:hover {
           background-color: $orange;
         }
+      }
+
+      &.active {
+        background-color: $green;
+        color: white;
       }
     }
   }

@@ -882,6 +882,7 @@ footer .footer__right .footer-swiper .swiper-slide img {
   font-size: 1.4rem;
   color: #84c54e;
   line-height: normal;
+  margin-bottom: 2rem;
 }
 .activities__main .grid .item img {
   max-width: 100%;
@@ -918,13 +919,20 @@ footer .footer__right .footer-swiper .swiper-slide img {
   justify-content: center;
   align-items: center;
   border: 0;
+  background-color: #f6f5f2;
+  color: #8a8a8a;
 }
 .activities__main .pagination button.nav {
   background-color: #333333;
   color: white;
+  font-family: monospace;
 }
 .activities__main .pagination button.nav:hover {
   background-color: #ff7e27;
+}
+.activities__main .pagination button.active {
+  background-color: #84c54e;
+  color: white;
 }
 
 .scrollTopBtn {

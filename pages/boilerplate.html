@@ -1,301 +1,242 @@
 <!DOCTYPE html>
 <html lang="az">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link
-      rel="shortcut icon"
-      href="https://inaye.az/images/inaye_logo.svg"
-      type="image/x-icon"
-    />
-    <!-- google fonts  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <!-- swiper  -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <title>"İnayə" | Fəaliyyətlərimiz</title>
-  </head>
-  <body>
-    <header>
-      <!-- haeder hamburger -->
-      <button class="header__hamburger">
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <!-- header logo -->
-      <a href="../index.html" class="header__logo">
-        <img src="https://inaye.az/images/inaye_logo.svg" alt="logo" />
-        <span>Xeyriyyə ictimai birliyi</span>
-      </a>
-      <!-- header menu  -->
-      <ul class="header__menu">
-        <li>
-          <a href="../index.html">Əsas</a>
-        </li>
-        <li>
-          <a href="../pages/about.html">Haqqımızda</a>
-        </li>
-        <li class="dropdown active">
-          <a href="#" class="dropbtn"
-            >Fəaliyyətlər <ion-icon name="chevron-down"></ion-icon
-          ></a>
-          <div class="dropdown-content">
-            <a href="../pages/activities.html">Fəaliyyətlərimiz</a>
-            <a href="../pages/activities.html">Aksiyalar</a>
-            <a href="../pages/activities.html">Layihələr</a>
-          </div>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropbtn"
-            >Müraciət <ion-icon name="chevron-down"></ion-icon
-          ></a>
-          <div class="dropdown-content">
-            <a href="./subscribe.html">Üzv Ol</a>
-            <a href="../pages/subscribe.html">Könüllü Ol</a>
-            <a href="../pages/volunteer.html">Ehtiyacım Var</a>
-          </div>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropbtn"
-            >Qalereya <ion-icon name="chevron-down"></ion-icon
-          ></a>
-          <div class="dropdown-content">
-            <a href="../pages/photos.html">Fotolar</a>
-            <a href="../pages/videos.html">Videolar</a>
-          </div>
-        </li>
-        <li>
-          <a href="../pages/calculations.html">Hesabat</a>
-        </li>
-        <li>
-          <a href="../pages/contact.html">Əlaqə</a>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropbtn"
-            >AZ <ion-icon name="chevron-down"></ion-icon
-          ></a>
-          <div class="dropdown-content dropdown-lang">
-            <a href="#">AZ</a>
-            <a href="#">RU</a>
-            <a href="#">EN</a>
-          </div>
-        </li>
-        <li class="header__donate">
-          <a
-            href="https://hesab.az/unregistered/#/direct-pay/charity/inaye/parameters"
-            >İanə et</a
-          >
-        </li>
-      </ul>
-    </header>
 
-    <!-- mobile nav menu -->
-    <section class="mobilenav">
-      <ul class="mobilenav-menu">
-        <li>
-          <a href="../index.html">Əsas</a>
-        </li>
-        <li>
-          <a href="../pages/contact.html">Haqqımızda</a>
-        </li>
-        <li>
-          <a href="#" class="accordion"
-            >Fəaliyyətlər <ion-icon name="chevron-down"></ion-icon
-          ></a>
-          <div class="accordion-content">
-            <a href="../pages/activities.html">Fəaliyyətlərimiz</a>
-            <a href="../pages/activities.html">Aksiyalar</a>
-            <a href="../pages/activities.html">Layihələr</a>
-          </div>
-        </li>
-        <li>
-          <a href="#" class="accordion"
-            >Müraciət <ion-icon name="chevron-down"></ion-icon
-          ></a>
-          <div class="accordion-content">
-            <a href="./subscribe.html">Üzv Ol</a>
-            <a href="../pages/subscribe.html">Könüllü Ol</a>
-            <a href="../pages/volunteer.html">Ehtiyacım Var</a>
-          </div>
-        </li>
-        <li>
-          <a href="#" class="accordion"
-            >Qalereya <ion-icon name="chevron-down"></ion-icon
-          ></a>
-          <div class="accordion-content">
-            <a href="../pages/photos.html">Fotolar</a>
-            <a href="../pages/videos.html">Videolar</a>
-          </div>
-        </li>
-        <li>
-          <a href="../pages/calculations.html">Hesabat</a>
-        </li>
-        <li>
-          <a href="../pages/contact.html">Əlaqə</a>
-        </li>
-        <li>
-          <a href="#" class="accordion"
-            >AZ <ion-icon name="chevron-down"></ion-icon
-          ></a>
-          <div class="accordion-content">
-            <a href="#">AZ</a>
-            <a href="#">RU</a>
-            <a href="#">EN</a>
-          </div>
-        </li>
-        <li class="header__donate">
-          <a
-            href="https://hesab.az/unregistered/#/direct-pay/charity/inaye/parameters"
-            >İanə et</a
-          >
-        </li>
-      </ul>
-      <button class="mobilenavclose">
-        <ion-icon name="close"></ion-icon>
-      </button>
-    </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="shortcut icon" href="https://inaye.az/images/inaye_logo.svg" type="image/x-icon" />
+  <!-- google fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <!-- swiper  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <title>"İnayə" | Fəaliyyətlərimiz</title>
+</head>
 
-    <div class="stickybar">
-      <a
-        href="https://hesab.az/unregistered/#/direct-pay/charity/inaye/parameters"
-        class="donate"
-      >
-        <ion-icon name="star"></ion-icon>
-        İanə Et
-      </a>
-      <a href="../pages/subscribe.html" class="register">
-        <ion-icon name="person"></ion-icon>
-        Üzv ol
-      </a>
-      <a href="../pages/volunteer.html" class="voluntary">
-        <ion-icon name="person-add"></ion-icon>
-        Könüllü ol
-      </a>
-    </div>
-
-    <button class="scrollTopBtn">
-      <ion-icon name="chevron-up"></ion-icon>
+<body>
+  <header>
+    <!-- haeder hamburger -->
+    <button class="header__hamburger">
+      <ion-icon name="menu"></ion-icon>
     </button>
-
-    <footer>
-      <div class="footer__left">
-        <a href="./index.html" class="footer__logo">
-          <img
-            src="https://inaye.az/images/inaye_logo_white.svg"
-            alt="inaye logo"
-          />
-          <span>XEYRİYYƏ İCTİMAİ BİRLİYİ</span>
-        </a>
-        <div class="footer__contact">
-          <p>
-            Bizimlə sosial şəbəkələrdən, ünvanımızdan və ya əlaqə nömrəmizdən
-            əlaqə qura bilərsiniz.
-          </p>
-          <br />
-          <p>
-            Bakı, Nərimanov rayonu, Əhməd Rəcəbli küçəsi 2/24
-            <br />
-            +994 55 540 25 50
-            <br />
-            <a href="mailto: info@inaye.az">info@inaye.az</a>
-          </p>
+    <!-- header logo -->
+    <a href="../index.html" class="header__logo">
+      <img src="https://inaye.az/images/inaye_logo.svg" alt="logo" />
+      <span>Xeyriyyə ictimai birliyi</span>
+    </a>
+    <!-- header menu  -->
+    <ul class="header__menu">
+      <li>
+        <a href="../index.html">Əsas</a>
+      </li>
+      <li>
+        <a href="../pages/about.html">Haqqımızda</a>
+      </li>
+      <li class="dropdown active">
+        <a href="#" class="dropbtn">Fəaliyyətlər <ion-icon name="chevron-down"></ion-icon></a>
+        <div class="dropdown-content">
+          <a href="../pages/activities.html">Fəaliyyətlərimiz</a>
+          <a href="../pages/activities.html">Aksiyalar</a>
+          <a href="../pages/activities.html">Layihələr</a>
         </div>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Müraciət <ion-icon name="chevron-down"></ion-icon></a>
+        <div class="dropdown-content">
+          <a href="./subscribe.html">Üzv Ol</a>
+          <a href="../pages/volunteer.html">Könüllü Ol</a>
+          <a href="../pages/errorpage.html">Ehtiyacım Var</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Qalereya <ion-icon name="chevron-down"></ion-icon></a>
+        <div class="dropdown-content">
+          <a href="../pages/photos.html">Fotolar</a>
+          <a href="../pages/videos.html">Videolar</a>
+        </div>
+      </li>
+      <li>
+        <a href="../pages/calculations.html">Hesabat</a>
+      </li>
+      <li>
+        <a href="../pages/contact.html">Əlaqə</a>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">AZ <ion-icon name="chevron-down"></ion-icon></a>
+        <div class="dropdown-content dropdown-lang">
+          <a href="#">AZ</a>
+          <a href="#">RU</a>
+          <a href="#">EN</a>
+        </div>
+      </li>
+      <li class="header__donate">
+        <a href="https://hesab.az/unregistered/#/direct-pay/charity/inaye/parameters">İanə et</a>
+      </li>
+    </ul>
+  </header>
+
+  <!-- mobile nav menu -->
+  <section class="mobilenav">
+    <ul class="mobilenav-menu">
+      <li>
+        <a href="../index.html">Əsas</a>
+      </li>
+      <li>
+        <a href="../pages/contact.html">Haqqımızda</a>
+      </li>
+      <li>
+        <a href="#" class="accordion">Fəaliyyətlər <ion-icon name="chevron-down"></ion-icon></a>
+        <div class="accordion-content">
+          <a href="../pages/activities.html">Fəaliyyətlərimiz</a>
+          <a href="../pages/activities.html">Aksiyalar</a>
+          <a href="../pages/activities.html">Layihələr</a>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="accordion">Müraciət <ion-icon name="chevron-down"></ion-icon></a>
+        <div class="accordion-content">
+          <a href="./subscribe.html">Üzv Ol</a>
+          <a href="../pages/volunteer.html">Könüllü Ol</a>
+          <a href="../pages/errorpage.html">Ehtiyacım Var</a>
+        </div>
+      </li>
+      <li>
+        <a href="#" class="accordion">Qalereya <ion-icon name="chevron-down"></ion-icon></a>
+        <div class="accordion-content">
+          <a href="../pages/photos.html">Fotolar</a>
+          <a href="../pages/videos.html">Videolar</a>
+        </div>
+      </li>
+      <li>
+        <a href="../pages/calculations.html">Hesabat</a>
+      </li>
+      <li>
+        <a href="../pages/contact.html">Əlaqə</a>
+      </li>
+      <li>
+        <a href="#" class="accordion">AZ <ion-icon name="chevron-down"></ion-icon></a>
+        <div class="accordion-content">
+          <a href="#">AZ</a>
+          <a href="#">RU</a>
+          <a href="#">EN</a>
+        </div>
+      </li>
+      <li class="header__donate">
+        <a href="https://hesab.az/unregistered/#/direct-pay/charity/inaye/parameters">İanə et</a>
+      </li>
+    </ul>
+    <button class="mobilenavclose">
+      <ion-icon name="close"></ion-icon>
+    </button>
+  </section>
+
+  <div class="stickybar">
+    <a href="https://hesab.az/unregistered/#/direct-pay/charity/inaye/parameters" class="donate">
+      <ion-icon name="star"></ion-icon>
+      İanə Et
+    </a>
+    <a href="../pages/subscribe.html" class="register">
+      <ion-icon name="person"></ion-icon>
+      Üzv ol
+    </a>
+    <a href="../pages/volunteer.html" class="voluntary">
+      <ion-icon name="person-add"></ion-icon>
+      Könüllü ol
+    </a>
+  </div>
+
+  <button class="scrollTopBtn">
+    <ion-icon name="chevron-up"></ion-icon>
+  </button>
+
+  <footer>
+    <div class="footer__left">
+      <a href="./index.html" class="footer__logo">
+        <img src="https://inaye.az/images/inaye_logo_white.svg" alt="inaye logo" />
+        <span>XEYRİYYƏ İCTİMAİ BİRLİYİ</span>
+      </a>
+      <div class="footer__contact">
+        <p>
+          Bizimlə sosial şəbəkələrdən, ünvanımızdan və ya əlaqə nömrəmizdən
+          əlaqə qura bilərsiniz.
+        </p>
+        <br />
+        <p>
+          Bakı, Nərimanov rayonu, Əhməd Rəcəbli küçəsi 2/24
+          <br />
+          +994 55 540 25 50
+          <br />
+          <a href="mailto: info@inaye.az">info@inaye.az</a>
+        </p>
       </div>
-      <div class="footer__right">
-        <aside class="swiper footer-swiper">
-          <h3>TƏRƏFDAŞLARIMIZ</h3>
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img
-                src="https://inaye.az/uploads/61725f541336a.png"
-                alt="inaye partner"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="https://inaye.az/uploads/6077f6771937a.jpg"
-                alt="inaye partner"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="https://inaye.az/uploads/6077f6ebc2edf.jpg"
-                alt="inaye partner"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="https://inaye.az/uploads/6077f582b68ae.jpg"
-                alt="inaye partner"
-              />
-            </div>
-            <div class="swiper-slide">
-              <img
-                src="https://inaye.az/uploads/6077f6c528e3c.jpg"
-                alt="inaye partner"
-              />
-            </div>
+    </div>
+    <div class="footer__right">
+      <aside class="swiper footer-swiper">
+        <h3>TƏRƏFDAŞLARIMIZ</h3>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://inaye.az/uploads/61725f541336a.png" alt="inaye partner" />
           </div>
-        </aside>
-        <aside>
-          <h3>SOSİALLAR</h3>
-          <ul>
-            <li>
-              <a href="https://facebook.com/inaye.az/">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.youtube.com/channel/UCOvmOkg78H_1LX6EXp5egCg"
-              >
-                <ion-icon name="logo-youtube"></ion-icon>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/inaye-xeyriyye-ictimai-birliyi-374a3b206/?originalSubdomain=az"
-              >
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/inayexeyriyye/">
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-          </ul>
-        </aside>
-      </div>
-    </footer>
+          <div class="swiper-slide">
+            <img src="https://inaye.az/uploads/6077f6771937a.jpg" alt="inaye partner" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://inaye.az/uploads/6077f6ebc2edf.jpg" alt="inaye partner" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://inaye.az/uploads/6077f582b68ae.jpg" alt="inaye partner" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://inaye.az/uploads/6077f6c528e3c.jpg" alt="inaye partner" />
+          </div>
+        </div>
+      </aside>
+      <aside>
+        <h3>SOSİALLAR</h3>
+        <ul>
+          <li>
+            <a href="https://facebook.com/inaye.az/">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/channel/UCOvmOkg78H_1LX6EXp5egCg">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/inaye-xeyriyye-ictimai-birliyi-374a3b206/?originalSubdomain=az">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/inayexeyriyye/">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </footer>
 
-    <section class="copyright-section">
-      <p>
-        © 2022 | "İNAYƏ" | Bütün Hüquqlar Qorunur | Hazırlanıb
-        <a href="https://nspsolutions.net/">NSPSOLUTIONS</a>
-      </p>
-    </section>
+  <section class="copyright-section">
+    <p>
+      © 2022 | "İNAYƏ" | Bütün Hüquqlar Qorunur | Hazırlanıb
+      <a href="https://nspsolutions.net/">NSPSOLUTIONS</a>
+    </p>
+  </section>
 
-    <!-- ionicons  -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <!-- swiper  -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="../main.js"></script>
-  </body>
+  <!-- ionicons  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- swiper  -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="../main.js"></script>
+</body>
+
 </html>

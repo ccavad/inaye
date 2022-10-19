@@ -600,6 +600,7 @@ header {
 .home__calltoaction .grid .links .voluntary:hover {
   background-color: #84c54e;
 }
+
 footer {
   background-color: #333333;
   padding: 5rem 4rem 7rem;
@@ -933,6 +934,279 @@ footer .footer__right .footer-swiper .swiper-slide img {
 .activities__main .pagination button.active {
   background-color: #84c54e;
   color: white;
+}
+
+.subscribe__main,
+.volunteer__main {
+  padding: 3rem 5rem;
+}
+@media (max-width: 564px) {
+  .subscribe__main,
+.volunteer__main {
+    padding: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .subscribe__main,
+.volunteer__main {
+    padding: 3rem;
+  }
+  .subscribe__main .grid,
+.volunteer__main .grid {
+    display: flex !important;
+    flex-direction: column;
+    padding: 0;
+  }
+  .subscribe__main .grid h1,
+.volunteer__main .grid h1 {
+    font-size: 2rem !important;
+  }
+  .subscribe__main .grid p,
+.volunteer__main .grid p {
+    font-size: 0.8rem !important;
+  }
+  .subscribe__main .grid form,
+.volunteer__main .grid form {
+    display: flex !important;
+    flex-direction: column;
+    gap: 1rem !important;
+  }
+  .subscribe__main .grid form label,
+.volunteer__main .grid form label {
+    width: 100% !important;
+  }
+}
+.subscribe__main .grid,
+.volunteer__main .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+.subscribe__main .grid h1,
+.volunteer__main .grid h1 {
+  grid-column: span 1;
+  color: #84c54e;
+  font-size: 3.4rem;
+  font-weight: 600;
+}
+.subscribe__main .grid p,
+.volunteer__main .grid p {
+  grid-column: span 2;
+  padding-left: 1rem;
+  border-left: 2px solid #84c54e;
+  font-size: 1rem;
+  color: #585858;
+  font-weight: 500;
+  max-width: 90%;
+}
+.subscribe__main .grid form,
+.volunteer__main .grid form {
+  grid-column: span 3;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.subscribe__main .grid form label,
+.volunteer__main .grid form label {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #0d0d0d;
+  text-align: center;
+  font-size: 1.25rem;
+  flex: 1;
+}
+.subscribe__main .grid form label input,
+.subscribe__main .grid form label select,
+.subscribe__main .grid form label textarea,
+.volunteer__main .grid form label input,
+.volunteer__main .grid form label select,
+.volunteer__main .grid form label textarea {
+  width: 100%;
+  line-height: 1.2857em;
+  color: #8a8a8a;
+  border-color: #b9b9b9;
+  background-color: #f2f2f2;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border-bottom: none;
+  border-right: none;
+  outline: none;
+  resize: none;
+  padding: 0.55em 0.5em;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.subscribe__main .grid form input[type=email]:active, .subscribe__main .grid form input[type=email]:focus,
+.subscribe__main .grid form select:active,
+.subscribe__main .grid form select:focus,
+.subscribe__main .grid form textarea:active,
+.subscribe__main .grid form textarea:focus,
+.volunteer__main .grid form input[type=email]:active,
+.volunteer__main .grid form input[type=email]:focus,
+.volunteer__main .grid form select:active,
+.volunteer__main .grid form select:focus,
+.volunteer__main .grid form textarea:active,
+.volunteer__main .grid form textarea:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.subscribe__main .grid .subscribe__submit,
+.volunteer__main .grid .subscribe__submit {
+  grid-column: span 3;
+  display: flex;
+  justify-content: center;
+}
+.subscribe__main .grid button,
+.volunteer__main .grid button {
+  background-color: #ffe400;
+  color: #333333;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.9em 1.75em;
+  font-weight: 700;
+  letter-spacing: -0.013em;
+  border-radius: 3px;
+  border: 0;
+  font-size: 1.2rem;
+}
+.subscribe__main .grid button:hover,
+.volunteer__main .grid button:hover {
+  background-color: #ff7e27;
+  color: white;
+}
+
+.volunteer__main .grid form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.volunteer__main .grid form label:nth-of-type(4),
+.volunteer__main .grid form label:nth-of-type(5) {
+  grid-column: span 3;
+  justify-self: center;
+}
+.volunteer__main .grid form label:nth-of-type(4) {
+  width: 25%;
+}
+.volunteer__main .grid form label:nth-of-type(5) {
+  width: 50%;
+}
+.volunteer__main .grid form label:nth-of-type(5) textarea {
+  height: 110px;
+}
+.volunteer__main .grid .volunteer__submit {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  grid-column: span 3;
+}
+
+.error__main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  padding: 3rem;
+}
+@media (max-width: 600px) {
+  .error__main h1 {
+    font-size: 5rem !important;
+  }
+  .error__main p {
+    font-size: 1rem !important;
+  }
+}
+.error__main h1 {
+  color: #84c54e;
+  font-weight: 800;
+  font-size: 12rem;
+  margin: 0 0 10px;
+}
+.error__main h2 {
+  font-weight: 700;
+  color: #ff7e27;
+}
+.error__main p {
+  color: #3a3a3a;
+  font-size: 1.3em;
+  font-weight: 500;
+  max-width: 800px;
+}
+.error__main a {
+  background-color: #84c54e;
+  padding: 0.7rem 1.2rem;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: 600;
+  max-width: 240px;
+  font-size: 1.3rem;
+}
+.error__main a:hover {
+  background-color: #ff7e27;
+  color: white;
+}
+
+.photos__main .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 310px);
+  grid-template-rows: repeat(4, 175px);
+  gap: 2rem;
+  justify-content: center;
+}
+.photos__main .grid .item {
+  position: relative;
+  width: 100%;
+  height: 175px;
+}
+.photos__main .grid .item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: 0.1s;
+  display: none;
+  pointer-events: none;
+  z-index: 5;
+}
+.photos__main .grid .item:hover::after {
+  display: block;
+}
+.photos__main .grid .item:hover button, .photos__main .grid .item:hover .label {
+  display: flex;
+}
+.photos__main .grid .item img {
+  position: absolute;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+  height: 100%;
+}
+.photos__main .grid .item button,
+.photos__main .grid .item .label {
+  display: none;
+  position: absolute;
+  z-index: 6;
+}
+.photos__main .grid .item button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.15);
+  color: white;
+  border: 0;
+}
+.photos__main .grid .item button:hover {
+  background-color: rgba(128, 128, 128, 0.5);
+}
+.photos__main .grid .item button ion-icon {
+  font-size: 1.2rem;
 }
 
 .scrollTopBtn {

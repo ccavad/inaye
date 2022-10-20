@@ -37,7 +37,7 @@
       <li>
         <a href="../pages/about.html">Haqqımızda</a>
       </li>
-      <li class="dropdown active">
+      <li class="dropdown">
         <a href="#" class="dropbtn">Fəaliyyətlər <ion-icon name="chevron-down"></ion-icon></a>
         <div class="dropdown-content">
           <a href="../pages/activities.html">Fəaliyyətlərimiz</a>
@@ -53,7 +53,7 @@
           <a href="../pages/errorpage.html">Ehtiyacım Var</a>
         </div>
       </li>
-      <li class="dropdown">
+      <li class="dropdown active">
         <a href="#" class="dropbtn">Qalereya <ion-icon name="chevron-down"></ion-icon></a>
         <div class="dropdown-content">
           <a href="../pages/photos.html">Fotolar</a>
@@ -151,7 +151,7 @@
   </div>
 
   <section class="photos__main">
-    <h1>FOTOLAR</h1>
+    <h2>FOTOLAR</h2>
     <div class="grid"></div>
     <div class="pagination">
       <button class="nav">
@@ -255,16 +255,28 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script>
     const grid = document.querySelector(".photos__main .grid");
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < 12; i++) {
       grid.innerHTML += `
         <div class="item">
           <img src="https://inaye.az/uploads/616966ae81635.jpg" alt="inaye" />
           <button>
             <ion-icon name="search"></ion-icon>  
           </button>
-          <div class="label">TİBBİ YARDIM</div>
+          <div class="title">TİBBİ YARDIM</div>
         </div>
       `;
+
+      document.querySelectorAll(".item").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          const modal = document.createElement("div");
+          modal.classList.add("lightbox");
+          const img = document.createElement("img");
+          img.src = btn.parentElement.querySelector("img").src
+          modal.appendChild(img);
+          document.querySelector("body").appendChild(modal);
+          modal.addEventListener("click", () => modal.remove())
+        })
+      })
     }
   </script>
   <script src="../main.js"></script>

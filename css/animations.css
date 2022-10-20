@@ -32,3 +32,35 @@
     opacity: 1;
   }
 }
+
+@keyframes photosbtn {
+  from {
+    opacity: 0;
+    top: 0%;
+  }
+  to {
+    opacity: 1;
+    top: 45%;
+  }
+}
+
+@keyframes photostitle {
+  from {
+    opacity: 0;
+    bottom: 30%
+  }
+
+  to {
+    opacity: 1;
+    bottom: 50%
+  }
+}
+
+@keyframes lightboximg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

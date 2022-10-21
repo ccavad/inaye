@@ -13,12 +13,6 @@ mobilenavclose.addEventListener("click", () => {
   mobilenav.classList.remove("active");
 });
 
-// form
-
-document.querySelector("form button").addEventListener("click", (e) => {
-  e.preventDefault();
-});
-
 // accordion
 const accordions = document.querySelectorAll(".accordion");
 
@@ -119,4 +113,10 @@ scrollTopBtn.addEventListener("click", () => {
     top: 0,
     behavior: "smooth",
   });
+});
+
+// form
+
+document.querySelector("form button").addEventListener("click", (e) => {
+  e.preventDefault();
 });

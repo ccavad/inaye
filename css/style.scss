@@ -38,6 +38,15 @@ a {
   display: inline;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $black;
+}
+
 // dropdown menu
 .dropdown {
   position: relative;
@@ -1268,9 +1277,10 @@ footer {
   }
 }
 
-// photos page
+// photos videos page
 
-.photos__main {
+.photos__main,
+.videos__main {
   padding: 3rem 5rem;
   display: flex;
   flex-direction: column;
@@ -1294,6 +1304,67 @@ footer {
 
     @media (max-width: 768px) {
       font-size: 2rem;
+    }
+  }
+
+  .videos-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 3rem;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+
+    .item {
+      width: 310px;
+      height: 175px;
+      position: relative;
+
+      .item-overlay {
+        position: absolute;
+
+        &::after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          position: absolute;
+          background-color: rgba(0, 0, 0, 0.3);
+          display: none;
+          z-index: 4;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        ion-icon {
+          display: none;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 4rem;
+          color: white;
+          z-index: 6;
+          cursor: pointer;
+          animation: scalein 0.3s linear;
+          transform-origin: 1rem 1rem;
+        }
+
+        &:hover {
+          ion-icon {
+            display: block;
+          }
+          &::after {
+            display: block;
+          }
+        }
+      }
     }
   }
 
@@ -1448,6 +1519,157 @@ footer {
   img {
     max-width: 70%;
     animation: lightboximg 0.5s linear;
+  }
+}
+
+// contact page
+
+.contact__main {
+  .contact__map {
+    iframe {
+      width: 100% !important;
+    }
+  }
+
+  .contact__bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem 5rem;
+    gap: 1rem;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+      padding: 3rem;
+      gap: 2rem;
+    }
+    @media (max-width: 500px) {
+      padding: 2rem 1rem;
+    }
+  }
+
+  .contact__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 90%;
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    h3 {
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+    }
+    b {
+      color: $black;
+    }
+    p {
+      color: #8a8a8a;
+
+      a {
+        color: $green;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+    ul li {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+
+      &:nth-type-of(1) {
+        background-color: #3b5998;
+      }
+      &:nth-type-of(2) {
+        background-color: #e52d27;
+      }
+      &:nth-type-of(3) {
+        background-color: #1ab7ea;
+      }
+      &:nth-type-of(4) {
+        background-color: #cc2127;
+      }
+
+      ion-icon {
+        width: 30px;
+        height: 30px;
+        color: white;
+      }
+    }
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    line-height: 1.2857em;
+    color: #8a8a8a;
+    border-color: #b9b9b9;
+    background-color: #f2f2f2;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 0.75rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: inherit;
+
+    &:active,
+    &:focus {
+      border-top: 2px solid;
+      border-left: 2px solid;
+    }
+  }
+  label {
+    color: #8a8a8a;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.2rem;
+  }
+  input[type="email"],
+  textarea {
+    &:active,
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+      border: 0;
+    }
+  }
+  button {
+    background-color: $green;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.9em 1.75em;
+    font-weight: 700;
+    letter-spacing: -0.013em;
+    border-radius: 3px;
+    border: 0;
+    font-size: 1.2rem;
+    align-self: flex-start;
+
+    &:hover {
+      background-color: $orange;
+    }
+  }
+  .contact__form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @media (max-width: 1024px) {
+      width: 90%;
+    }
+
+    textarea {
+      height: 200px;
+      resize: none;
+    }
   }
 }
 

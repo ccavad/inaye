@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "animations.css";
 *,
 *::after,
@@ -100,6 +101,12 @@ header {
   z-index: 2;
   background-color: white;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  scroll-behavior: smooth;
+}
+header.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 @media (max-width: 1200px) {
   header {
@@ -1581,6 +1588,154 @@ footer .footer__right .footer-swiper .swiper-slide img {
 .contact__main .contact__form form textarea {
   height: 200px;
   resize: none;
+}
+
+.calc__main {
+  padding: 3rem 5rem;
+  background-image: url("https://inaye.az/images/bg-5.jpg");
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+@media (max-width: 1200px) {
+  .calc__main {
+    padding: 3rem 4rem;
+  }
+}
+@media (max-width: 550px) {
+  .calc__main {
+    padding: 3rem 2rem;
+  }
+  .calc__main h2 {
+    font-size: 2.5rem !important;
+  }
+  .calc__main h4 {
+    font-size: 1rem !important;
+  }
+  .calc__main .calc__top-right {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .calc__main .calc__top-right .item {
+    font-size: 0.75rem !important;
+  }
+}
+.calc__main .calc__top {
+  display: flex;
+  gap: 2rem;
+}
+@media (max-width: 900px) {
+  .calc__main .calc__top {
+    flex-direction: column;
+  }
+}
+.calc__main .calc__top .calc__top-left,
+.calc__main .calc__top .calc__top-right {
+  flex: 1;
+}
+.calc__main .calc__top .calc__top-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.calc__main .calc__top .calc__top-left h2 {
+  font-weight: 800;
+  font-size: 4rem;
+  color: #333333;
+}
+.calc__main .calc__top .calc__top-left h4 {
+  color: #333333;
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 1.25em;
+}
+.calc__main .calc__top .calc__top-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 900px) {
+  .calc__main .calc__top .calc__top-right {
+    gap: 2rem;
+  }
+}
+.calc__main .calc__top .calc__top-right .item {
+  font-size: 1rem;
+  color: #2b1e9c;
+  font-weight: 800;
+}
+.calc__main .calc__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  row-gap: 3rem;
+}
+.calc__main .calc__bottom .item {
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.calc__main .calc__bottom .item .item-title {
+  padding-top: 0.5rem;
+  border-top: 5px solid #2b1e9c;
+  width: 90%;
+  color: #2b1e9c;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.calc__main .calc__bottom .item .bar-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 30px 350px;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  justify-items: center;
+  padding-bottom: 1rem;
+  align-items: flex-end;
+  row-gap: 1rem;
+  position: relative;
+}
+.calc__main .calc__bottom .item .bar-container .item-total {
+  color: #84c54e;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+.calc__main .calc__bottom .item .bar-container .item-bar {
+  height: 100%;
+  background-color: #84c54e;
+  width: 44px;
+  border-radius: 5px;
+  height: 0%;
+}
+.calc__main .calc__bottom .item .bar-container .first-bar::after {
+  content: "Cari Ay";
+  position: absolute;
+  left: -50%;
+  rotate: 270deg;
+  bottom: 20%;
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-style: italic;
+  color: #2b1e9c;
+  width: 130px;
+  transform: translateY(-35%);
+}
+.calc__main .calc__bottom .item .bar-container .second-bar::after {
+  content: "Keçən Ay";
+  position: absolute;
+  left: 0;
+  rotate: 270deg;
+  bottom: 20%;
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-style: italic;
+  color: #2b1e9c;
+  transform: translateY(35%);
+  width: 130px;
 }
 
 .scrollTopBtn {

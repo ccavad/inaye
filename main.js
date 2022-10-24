@@ -115,8 +115,28 @@ scrollTopBtn.addEventListener("click", () => {
   });
 });
 
+// header becomes fixed on scroll
+
+window.onscroll = function () {
+  headerScroll();
+};
+
+const header = document.querySelector("header");
+
+const sticky = header.offsetTop;
+
+function headerScroll() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
 // form
 
-document.querySelector("form button").addEventListener("click", (e) => {
-  e.preventDefault();
-});
+if (document.querySelector("form button")) {
+  document.querySelector("form button").addEventListener("click", (e) => {
+    e.preventDefault();
+  });
+}

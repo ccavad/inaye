@@ -172,8 +172,8 @@
         <div class="bar-container">
           <div class="item-total" data-id="1">0</div>
           <div class="item-total" data-id="2">0</div>
-          <div class="item-bar first-bar" data-stop="101" data-id="1"></div>
-          <div class="item-bar second-bar" data-stop="71" data-id="2"></div>
+          <div class="item-bar first-bar" data-max="101" data-stop="101" data-id="1"></div>
+          <div class="item-bar second-bar" data-max="101" data-stop="71" data-id="2"></div>
         </div>
         <div class="item-title">Həkimə göndəriş</div>
       </div>
@@ -181,8 +181,8 @@
         <div class="bar-container">
           <div class="item-total" data-id="1">0</div>
           <div class="item-total" data-id="2">0</div>
-          <div class="item-bar first-bar" data-stop="101" data-id="1"></div>
-          <div class="item-bar second-bar" data-stop="71" data-id="2"></div>
+          <div class="item-bar first-bar" data-max="101" data-stop="101" data-id="1"></div>
+          <div class="item-bar second-bar" data-max="101" data-stop="71" data-id="2"></div>
         </div>
         <div class="item-title">Həkimə göndəriş</div>
       </div>
@@ -190,8 +190,8 @@
         <div class="bar-container">
           <div class="item-total" data-id="1">0</div>
           <div class="item-total" data-id="2">0</div>
-          <div class="item-bar first-bar" data-stop="10" data-id="1"></div>
-          <div class="item-bar second-bar" data-stop="7" data-id="2"></div>
+          <div class="item-bar first-bar" data-max="10" data-stop="10" data-id="1"></div>
+          <div class="item-bar second-bar" data-max="10" data-stop="7" data-id="2"></div>
         </div>
         <div class="item-title">Həkimə göndəriş</div>
       </div>
@@ -199,8 +199,8 @@
         <div class="bar-container">
           <div class="item-total" data-id="1">0</div>
           <div class="item-total" data-id="2">0</div>
-          <div class="item-bar first-bar" data-stop="10" data-id="1"></div>
-          <div class="item-bar second-bar" data-stop="7" data-id="2"></div>
+          <div class="item-bar first-bar" data-max="10" data-stop="10" data-id="1"></div>
+          <div class="item-bar second-bar" data-max="10" data-stop="7" data-id="2"></div>
         </div>
         <div class="item-title">Həkimə göndəriş</div>
       </div>
@@ -208,8 +208,8 @@
         <div class="bar-container">
           <div class="item-total" data-id="1">0</div>
           <div class="item-total" data-id="2">0</div>
-          <div class="item-bar first-bar" data-stop="101" data-id="1"></div>
-          <div class="item-bar second-bar" data-stop="71" data-id="2"></div>
+          <div class="item-bar first-bar" data-max="101" data-stop="101" data-id="1"></div>
+          <div class="item-bar second-bar" data-max="101" data-stop="71" data-id="2"></div>
         </div>
         <div class="item-title">Həkimə göndəriş</div>
       </div>
@@ -217,8 +217,8 @@
         <div class="bar-container">
           <div class="item-total" data-id="1">0</div>
           <div class="item-total" data-id="2">0</div>
-          <div class="item-bar first-bar" data-stop="10" data-id="1"></div>
-          <div class="item-bar second-bar" data-stop="7" data-id="2"></div>
+          <div class="item-bar first-bar" data-max="10" data-stop="10" data-id="1"></div>
+          <div class="item-bar second-bar" data-max="10" data-stop="7" data-id="2"></div>
         </div>
         <div class="item-title">Həkimə göndəriş</div>
       </div>
@@ -226,8 +226,8 @@
         <div class="bar-container">
           <div class="item-total" data-id="1">0</div>
           <div class="item-total" data-id="2">0</div>
-          <div class="item-bar first-bar" data-stop="101" data-id="1"></div>
-          <div class="item-bar second-bar" data-stop="71" data-id="2"></div>
+          <div class="item-bar first-bar" data-max="101" data-stop="101" data-id="1"></div>
+          <div class="item-bar second-bar" data-max="101" data-stop="71" data-id="2"></div>
         </div>
         <div class="item-title">Vətən borcu (AZN)</div>
       </div>
@@ -235,8 +235,8 @@
         <div class="bar-container">
           <div class="item-total" data-id="1">0</div>
           <div class="item-total" data-id="2">0</div>
-          <div class="item-bar first-bar" data-stop="101" data-id="1"></div>
-          <div class="item-bar second-bar" data-stop="71" data-id="2"></div>
+          <div class="item-bar first-bar" data-max="101" data-stop="101" data-id="1"></div>
+          <div class="item-bar second-bar" data-max="101" data-stop="71" data-id="2"></div>
         </div>
         <div class="item-title">Təhsilə dəstək (AZN)</div>
       </div>
@@ -347,6 +347,7 @@
       if (isInViewport && !accountFirstTime) {
         itemBars.forEach((bar) => {
           let stop = parseInt(bar.dataset.stop);
+          let max = parseInt(bar.dataset.max);
           let num = 0;
           let id = bar.dataset.id;
           let total = bar.parentElement.querySelector(`[data-id="${id}"]`);
@@ -357,10 +358,10 @@
                 num += Math.ceil(Math.random() * 3 + 2);
                 if (num > stop) {
                   total.innerText = stop;
-                  bar.style.height = `${100 / stop * num}%`
+                  bar.style.height = `${100 / max * num}%`
                 } else {
                   total.innerText = num;
-                  bar.style.height = `${100 / stop * num}%`
+                  bar.style.height = `${100 / max * num}%`
                 }
               }
             }, 100);
